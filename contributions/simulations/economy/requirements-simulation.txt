@@ -1,0 +1,2 @@
+# Generator only: requires Python 3.11+. Keep separate from the web runtime.
+numpy==2.3.5

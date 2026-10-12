@@ -1,0 +1,124 @@
+ARCHIVAL NOTE: This document describes the full hackathon package. This public repository is a source excerpt and does not run as a standalone application. Refer to the root README for the hosted demo and omitted dependencies.
+
+AMBLE SYNTHETIC ECONOMY — INTEGRATION NOTES
+
+CLARIFIED SCOPE
+The teammate's 250,000,000 daily earnings rows (5,000,000 residents x 50 days)
+are the intended authoritative income source. This package supplies the
+spending, pack openings, item outcomes, inventory/home changes, summaries
+and a linked detailed sample. The external earnings export has not yet been
+received or run through the importer. A generated demo is a separate,
+explicitly synthetic scenario, not evidence that the external import ran.
+
+Read EARNINGS_HANDOFF.txt for the input contract. The initial importer takes
+one globally ordered CSV/CSV.gz file; combine ordered shards with one header
+first. Day is a simulation-day index; generated event timestamps are assigned
+within the declared UTC simulation period and are synthetic timestamps.
+
+ECONOMY AND ORDERING
+Each resident starts with 12 credits. With one common 8-credit Daily pack,
+daily earnings are credited, all affordable packs are bought, and the
+remainder is carried. At day d:
+
+  cumulative_packs = floor((12 + cumulative_earnings_through_d) / 8)
+  closing_balance = 12 + cumulative_earnings_through_d
+                    - 8 * cumulative_packs
+
+Thus residents ranked by cumulative earnings have nondecreasing cumulative
+pack counts, with ties possible. Ending wallet balances alone are not a
+wealth ranking: after spending they are normally 0 through 7 credits.
+Use cumulative earnings or lifetime purchasing capacity for the intended
+"most money buys most packs" view; label the chosen ranking measure.
+
+One common SKU is selected for the whole default scenario. Editable Daily
+pack prices are 8, 16 and 24 credits. The Convenience furnishing prices are
+18, 32, 44 and 65 credits; these are direct permanent purchases and are not
+automatically purchased in the default pack scenario. Mixing SKUs or adding
+optional purchases changes the simple pack-count ordering guarantee.
+
+The referenced toy sandbox used permanent ownership for all seven products
+and included wage values 14, 16, 18 and 12 across its roles. This scenario
+intentionally changes Daily packs into repeatable stochastic containers in
+response to Nick's request. Consult the editable catalog/parameters for the
+exact role mapping and chosen rules; do not present these changes as the
+unchanged sandbox behavior. Healthcare, finance and construction jobs remain
+fictional, with no real professional-advice interpretation.
+
+PACKS, ITEMS AND FUNDING
+Default opening probabilities are 90% empty, 9% one drop and 1% two drops.
+These are assumptions, not observed frequencies. The catalog and item tables
+define the exact available contents and any unlock criteria. Pack purchase,
+pack opening and item drop are separate concepts; an empty opening is still
+a paid opening. Do not equate packs bought with items received.
+
+Permanent duplicate items remain inventory; only the first copy produces a
+new home placement. Consumables are used immediately. No resale, refunds or
+item-to-credit conversion are assumed. Item drops are not additional wage
+income. Detailed records should link purchase -> opening -> item -> home
+change where applicable, and retain a meaningful empty result otherwise.
+
+500,000,000 openings is a proposed funding target. At the default price it
+requires 4,000,000,000 credits of spending, against a 60,000,000-credit total
+starting endowment plus supplied earnings. Aggregate purchasing capacity is
+also affected by each resident's unused remainder. Report the actual funded
+count and any gap; do not force 500 million purchases or create negative
+balances. Random drops mean a resident with more packs can still receive
+fewer items than another resident.
+
+SCENARIOS, SCALE AND EXACTNESS
+The economical target demo represents the 5-million-resident population with
+20,000 weighted cohort paths across 50 days. Cohort-weighted aggregate
+estimates must remain labeled as estimates. Opening outcome counts use
+seeded multinomial sampling, avoiding a verbose row for every opening.
+The 200 detailed residents are included in the scenario totals, not an
+additional population. The intended supplied-input mode streams individual
+residents with weight 1 and computes earnings and spending exactly from the
+input; loot outcomes are still synthetic stochastic draws.
+
+Do not describe cohort estimates as 5 million independently simulated
+resident histories, or either mode as 250 million real agent/model runs.
+No per-resident model requests are needed. Generation time and size claims
+must refer to the actual run recorded in its manifest and validation report.
+
+IMPORT BOUNDARIES
+Import one scenario at a time. Keep world_id, simulation_id, synthetic: true,
+simulation version and provenance, and preserve IDs as strings. A preview,
+a target demo and a later supplied-earnings run are distinct scenarios.
+Use the delivered manifest and README as the final file inventory. Expected
+data artifacts include daily_summaries.json/jsonl/csv, sample_residents.jsonl,
+sample_events.jsonl.gz, sample_daily.jsonl, ranked_wallets.csv.gz,
+pack_outcomes.csv and item_drops.csv; filenames may vary by selected mode.
+
+The summary formats are alternative encodings of the same daily records.
+Do not import all three as additive facts. Likewise, the sample events,
+sample daily records, weighted cohort records and aggregate summaries are
+different views of overlapping activity. Never sum all of them together.
+Keep sample-detail collections separate from aggregate collections and mark
+sample membership, record grain, weight and estimation method explicitly.
+
+Use (simulation_id, day) for daily-summary uniqueness and stable event IDs
+for event uniqueness. Use (simulation_id, resident_id) for resident identity;
+item, SKU and opening references must resolve within the intended scenario
+and catalog version. Preserve linking references for drill-down from the
+aggregate day to the sample resident's job, wage, purchase and home history.
+
+CHECKS REQUIRED BEFORE IMPORT
+Confirm exactly 50 daily summaries, 200 complete sample residents, unique
+IDs, monotonic per-resident UTC event times and valid references. Confirm
+nonnegative balances and jobs/wages/purchases with:
+
+  opening_credits + wages - purchase_spend = closing_credits
+  sum(daily_wages) = scenario_wages
+  sum(daily_spend) = scenario_spend
+  starting_population_credits + scenario_wages - scenario_spend
+      = ending_population_credits
+
+Check pack counts by SKU against price-times-quantity spending, opening
+outcome counts against openings, and item-drop counts against one/two-drop
+outcomes. Treat weighted aggregate checks and exact sample checks according
+to their declared grain. Verify supplied file hashes against the manifest.
+If per-job wages were allocated from daily totals, keep that assumption in
+the imported provenance rather than implying observed individual wages.
+
+This handoff authorizes preparation only. No Atlas upload, app startup,
+changes to the running Amble app, or external publication are performed.

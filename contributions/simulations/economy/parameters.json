@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "world_id": "amble-presents-toy-town",
+  "seed": 20261011,
+  "start_date": "2026-01-01",
+  "days": 50,
+  "starting_credits": 12,
+  "purchase_sku": "daily-breakfast",
+  "target_pack_openings": 500000000,
+  "purchase_probability_when_affordable": 1.0,
+  "professions": {
+    "healthcare": {"share": 1, "wage_cycle": [14, 16, 18, 12]},
+    "finance": {"share": 1, "wage_cycle": [14, 16, 18, 12]},
+    "construction": {"share": 1, "wage_cycle": [14, 16, 18, 12]}
+  },
+  "demo_activity_profiles": [
+    {"id": "occasional", "share": 0.2, "active_probability": 0.65, "second_job_probability": 0.1},
+    {"id": "regular", "share": 0.55, "active_probability": 0.85, "second_job_probability": 0.25},
+    {"id": "frequent", "share": 0.25, "active_probability": 0.97, "second_job_probability": 0.5}
+  ],
+  "wealth_bin_lower_bounds": [0, 2, 4, 6, 8, 16, 32, 64, 128, 256, 512, 1024, 2048],
+  "source_context": {
+    "path": "sandbox/state.py",
+    "sha256": "96643be73b1cdaaac3cdfe3462e2fa03d5ae265d658a6c318873f982b81a94ed",
+    "read_only": true,
+    "grounded_values": "12 initial credits; sequence wage 12 + (sequence % 4) * 2 for all three professions; original seven SKU IDs, names, prices",
+    "scenario_changes": "Daily packs are repeatable loot containers here. Sandbox originally owns all seven products permanently. Purchase policy, activity, loot odds, item contents and duplicates are new editable simulation assumptions."
+  }
+}

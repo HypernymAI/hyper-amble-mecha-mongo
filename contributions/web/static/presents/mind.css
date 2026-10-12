@@ -1,0 +1,61 @@
+/* Amble's mind: a right-hand panel beside the chat on wide screens, a sheet
+   over the page on narrow ones. Built by mind.js; Studio theme variables. */
+.mind-toggle{display:flex;align-items:center;gap:7px;height:38px;margin-right:6px;font:11px var(--font-sans)!important;white-space:nowrap}
+.mind-toggle-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.mind-toggle.is-dreaming .mind-toggle-dot{background:var(--purple);box-shadow:0 0 10px var(--purple);animation:mind-pulse 1.4s ease-in-out infinite}
+.presents-shell .mind-toggle[aria-expanded="true"]{background:var(--glass-bg-hover,rgba(255,255,255,.07));color:var(--cyan)}
+.mind-panel{position:fixed;top:52px;right:0;bottom:0;width:340px;z-index:30;display:flex;flex-direction:column;background:linear-gradient(180deg,#0a2136f2,#051728f7);border-left:1px solid var(--glass-border);box-shadow:-12px 0 30px #0007;color:var(--text);font:13px/1.45 var(--font-sans);backdrop-filter:blur(10px)}
+body.mind-open #main{margin-right:340px}
+.mind-head{display:flex;align-items:flex-start;gap:8px;padding:14px 16px 8px}
+.mind-titles{flex:1;min-width:0}
+.mind-title{margin:0;font:500 16px var(--font-sans);letter-spacing:.2px}
+.mind-sub{margin:2px 0 0;font:10px var(--font-mono);color:var(--green);letter-spacing:.4px;text-transform:uppercase}
+.presents-shell .mind-close{border:0;background:none;font-size:22px;line-height:1;padding:2px 6px;color:var(--text-muted)}
+.mind-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0;padding:0 16px 10px}
+.mind-stat{background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:6px;padding:6px 4px;text-align:center}
+.mind-stat dd{margin:0;font:600 16px var(--font-mono);color:var(--text)}
+.mind-stat dt{font:9px var(--font-mono);color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px}
+.mind-dreaming{display:flex;align-items:center;gap:10px;margin:0 16px 10px;padding:8px 10px;border:1px solid #c8a0ff55;border-radius:6px;background:#c8a0ff14;color:var(--purple);font-size:12px}
+.mind-orb{flex:0 0 12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--purple) 45%,#6a3fb0);animation:mind-pulse 1.4s ease-in-out infinite}
+@keyframes mind-pulse{0%,100%{transform:scale(.8);opacity:.6}50%{transform:scale(1.15);opacity:1}}
+.mind-offline{margin:0 16px 10px;font-size:12px;color:var(--orange)}
+.mind-body{flex:1;min-height:0;overflow:auto;padding:0 16px 8px;scrollbar-width:thin}
+.mind-section{padding:10px 0;border-top:1px solid var(--glass-border)}
+.mind-section h3{display:flex;align-items:baseline;gap:8px;margin:0 0 8px;font:500 11px var(--font-mono);color:var(--text-muted);text-transform:uppercase;letter-spacing:.6px}
+.mind-hint{margin-left:auto;font-size:9px;color:var(--text-dim);text-transform:none;letter-spacing:0}
+.mind-spark{display:block;width:100%;height:auto;background:var(--glass-bg);border-radius:6px}
+.mind-grid{stroke:#ffffff12;stroke-width:1;vector-effect:non-scaling-stroke}
+.mind-line{fill:none;stroke:var(--cyan);stroke-width:1.6;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.mind-dot{fill:var(--bg);stroke:var(--cyan);stroke-width:1.2;vector-effect:non-scaling-stroke}.mind-dot.is-last{fill:var(--cyan)}
+.mind-delta{display:flex;flex-wrap:wrap;align-items:center;gap:2px 4px;margin:8px 0 0;font:11.5px var(--font-mono);color:var(--text-muted)}
+.mind-avg.is-after{color:var(--text)}.mind-arrow{color:var(--text-dim)}
+.mind-up{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:10px;background:#50fa7b22;color:var(--green);font-weight:600}.mind-up.is-down{background:#ff555522;color:var(--red)}
+.mind-critique{margin:6px 0 0;font-size:11px;font-style:italic;color:var(--text-muted)}
+.mind-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.mind-item{padding:7px 9px;border:1px solid var(--glass-border);border-radius:6px;background:var(--glass-bg);transition:background 1.2s,border-color 1.2s}
+.mind-item.is-fresh{animation:mind-fresh 3.5s ease-out}
+@keyframes mind-fresh{0%,30%{background:#01fdf61f;border-color:#01fdf688}100%{background:var(--glass-bg);border-color:var(--glass-border)}}
+.mind-meta{display:flex;align-items:center;gap:8px;margin-bottom:3px}
+.mind-kind{font:9px var(--font-mono);text-transform:uppercase;letter-spacing:.5px;padding:1px 6px;border-radius:9px;border:1px solid currentColor;color:var(--blue)}
+.mind-kind[data-kind="preference"]{color:var(--pink)}.mind-kind[data-kind="thread"]{color:var(--orange)}
+.mind-kind[data-kind="active"]{color:var(--green)}.mind-kind[data-kind="retired"]{color:var(--text-dim)}
+.mind-when{margin-left:auto;font:10px var(--font-mono);color:var(--text-dim)}
+.mind-origin{font:9px var(--font-mono);color:var(--text-dim)}
+.mind-text{margin:0;font-size:12.5px;line-height:1.45;overflow-wrap:anywhere}
+.mind-lesson{border-left:2px solid var(--green)}
+.mind-lesson.is-retired{border-left-color:var(--text-dim);opacity:.55}.mind-lesson.is-retired .mind-text{text-decoration:line-through;text-decoration-color:#ffffff40}
+.mind-dream-row{display:flex;gap:8px;font:11px var(--font-mono);color:var(--text-muted)}
+.mind-dream-row .mind-when{order:2;margin-left:auto;white-space:nowrap}
+.mind-empty{font-size:12px;color:var(--text-dim);padding:2px 0}
+.mind-foot{display:flex;align-items:center;gap:10px;padding:10px 16px 14px;border-top:1px solid var(--glass-border)}
+.presents-shell .mind-dream{border-color:#c8a0ff66;color:var(--purple);background:#c8a0ff14;font-size:12px}
+.mind-status{font-size:11px;color:var(--text-muted);line-height:1.35}
+@media(max-width:900px){
+ body.mind-open #main{margin-right:0}
+ .mind-panel{left:0;width:auto;border-left:0;border-top:1px solid var(--glass-border)}
+}
+@media(max-width:620px){
+ .mind-toggle{width:auto;height:32px;padding:5px 8px!important;margin-right:4px}
+ .presents-shell .studio-lanes{grid-template-columns:minmax(0,1fr) auto auto}
+ .mind-head{padding:12px 12px 6px}.mind-stats{padding:0 12px 8px}.mind-body{padding:0 12px 8px}.mind-foot{padding:10px 12px 12px}.mind-dreaming{margin:0 12px 8px}
+}

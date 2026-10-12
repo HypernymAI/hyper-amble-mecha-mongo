@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "catalog_version": "1.0.0",
+  "items": [
+    {"synthetic": true, "item_id": "item-pastry", "display_name": "Toy breakfast pastry", "ownership": "consumable"},
+    {"synthetic": true, "item_id": "item-mug", "display_name": "Breakfast mug", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-plant", "display_name": "Shelf plant", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-books", "display_name": "Book stack", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-lamp", "display_name": "Warm lamp", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-chair", "display_name": "Comfy chair", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-rug", "display_name": "Woven rug", "ownership": "permanent"},
+    {"synthetic": true, "item_id": "item-sofa", "display_name": "Cloud sofa", "ownership": "permanent"}
+  ],
+  "products": [
+    {"synthetic": true, "sku_id": "daily-breakfast", "display_name": "Breakfast basket", "shop": "Daily", "kind": "pack", "price_credits": 8, "ownership": "consumable", "unlock_criteria": null, "outcome_probabilities": {"empty": 0.9, "one_item": 0.09, "two_items": 0.01}, "item_contents": [{"item_id": "item-pastry", "weight": 40}, {"item_id": "item-mug", "weight": 20}, {"item_id": "item-plant", "weight": 15}, {"item_id": "item-books", "weight": 10}, {"item_id": "item-lamp", "weight": 8}, {"item_id": "item-chair", "weight": 4}, {"item_id": "item-rug", "weight": 2}, {"item_id": "item-sofa", "weight": 1}]},
+    {"synthetic": true, "sku_id": "daily-plants", "display_name": "Little garden pack", "shop": "Daily", "kind": "pack", "price_credits": 16, "ownership": "consumable", "unlock_criteria": null, "outcome_probabilities": {"empty": 0.9, "one_item": 0.09, "two_items": 0.01}, "item_contents": [{"item_id": "item-plant", "weight": 60}, {"item_id": "item-lamp", "weight": 25}, {"item_id": "item-rug", "weight": 15}]},
+    {"synthetic": true, "sku_id": "daily-books", "display_name": "Reading pack", "shop": "Daily", "kind": "pack", "price_credits": 24, "ownership": "consumable", "unlock_criteria": null, "outcome_probabilities": {"empty": 0.9, "one_item": 0.09, "two_items": 0.01}, "item_contents": [{"item_id": "item-books", "weight": 50}, {"item_id": "item-chair", "weight": 30}, {"item_id": "item-sofa", "weight": 20}]},
+    {"synthetic": true, "sku_id": "convenience-lamp", "display_name": "Warm lamp", "shop": "Convenience", "kind": "furnishing", "price_credits": 18, "ownership": "permanent", "unlock_criteria": null, "item_contents": [{"item_id": "item-lamp", "quantity": 1}]},
+    {"synthetic": true, "sku_id": "convenience-chair", "display_name": "Comfy chair", "shop": "Convenience", "kind": "furnishing", "price_credits": 32, "ownership": "permanent", "unlock_criteria": null, "item_contents": [{"item_id": "item-chair", "quantity": 1}]},
+    {"synthetic": true, "sku_id": "convenience-rug", "display_name": "Woven rug", "shop": "Convenience", "kind": "furnishing", "price_credits": 44, "ownership": "permanent", "unlock_criteria": null, "item_contents": [{"item_id": "item-rug", "quantity": 1}]},
+    {"synthetic": true, "sku_id": "convenience-sofa", "display_name": "Cloud sofa", "shop": "Convenience", "kind": "furnishing", "price_credits": 65, "ownership": "permanent", "unlock_criteria": null, "item_contents": [{"item_id": "item-sofa", "quantity": 1}]}
+  ]
+}

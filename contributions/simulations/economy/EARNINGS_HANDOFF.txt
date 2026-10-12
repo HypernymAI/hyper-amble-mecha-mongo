@@ -1,0 +1,89 @@
+ARCHIVAL NOTE: This document describes the full hackathon package. This public repository is a source excerpt and does not run as a standalone application. Refer to the root README for the hosted demo and omitted dependencies.
+
+AMBLE EARNINGS DATA — HANDOFF TO THE EARNINGS GENERATOR
+
+Please generate the earnings input for one explicitly synthetic toy-town
+scenario: 5,000,000 residents over 50 days, exactly 250,000,000 resident-day
+rows. Your earnings will be the authoritative income input to our spending,
+pack-opening, item-inventory and home-change simulation. Do not generate a
+second independent spending economy. Do not claim these are real agent or
+model runs, and do not make one model request per resident or row.
+
+FIRST DELIVERY
+Send the schema, generation seed/version, profession allocation and wage/job
+rules, plus a complete 50-day sample for 200 residents, before the full export.
+Include the list of those 200 resident IDs and the simulation's UTC start date.
+Keep healthcare, finance and construction explicitly fictional toy-town jobs.
+
+REQUIRED CSV CONTRACT
+UTF-8 CSV or CSV.gz, with this exact required header:
+resident_id,day,profession,jobs_completed,credits_earned,synthetic
+
+- resident_id: stable unique string containing only letters, digits, hyphens
+  or underscores. Prefer amble-000000001 through amble-005000000.
+- day: integer 1 through 50.
+- profession: healthcare, finance or construction. Keep each resident's
+  assigned profession stable; the current importer rejects role changes.
+- jobs_completed: nonnegative integer.
+- credits_earned: nonnegative integer credits for that resident on that day.
+  Positive earnings require at least one completed job. Zero-credit days must
+  still be present. Do not export balances as earnings.
+- synthetic: true on every row.
+
+Example:
+resident_id,day,profession,jobs_completed,credits_earned,synthetic
+amble-000000001,1,construction,2,28,true
+amble-000000001,2,construction,0,0,true
+
+Exactly one row per (resident_id, day), including zero-income days. Sort by
+resident_id lexicographically, then day numerically, so all 50 days for each
+resident are adjacent and increasing.
+
+OPTIONAL ACTUAL PER-JOB WAGES
+Add a job_wages column containing a JSON array of integer wages, CSV-escaped
+normally. Its length must equal jobs_completed and its sum must equal
+credits_earned; use [] for zero jobs. Example CSV field: "[14,14]".
+Without this column, we will divide each daily total as evenly as possible
+among its declared jobs and explicitly label these per-job wages as an
+allocation assumption, rather than your original individual job results.
+
+FULL DELIVERY
+Compressed partitions are fine. Keep each resident wholly within one shard,
+with globally ordered, non-overlapping resident ranges and an explicit shard
+order. Our first importer accepts one CSV/CSV.gz path: ordered shards must be
+combined into one logical CSV with one header before import.
+
+Include a manifest with simulation ID, seed, generator version/hash, all
+parameters and wage rules, synthetic: true, ordered shard paths, SHA-256
+hashes, row counts, unique resident count, and resident/job/earnings counts
+by profession and day. Validate all 250,000,000 rows, all 5,000,000 residents,
+50 rows per resident, no duplicate resident-day pairs, allowed professions,
+nonnegative integer values, and the per-job sums if supplied. Report actual
+generation time, file sizes and checks performed. Avoid private conversations,
+credentials and Atlas uploads.
+
+WHAT WE WILL DO WITH YOUR EARNINGS
+Every resident starts with 12 credits. In the default spending scenario,
+everyone buys the same editable 8-credit Daily pack after earning each day:
+packs_bought = floor((opening_balance + credits_earned) / 8), with the
+remaining credits carried forward. This makes cumulative pack counts increase
+with cumulative earnings at any common day. Outcomes remain random, so more
+packs do not guarantee more items for every individual.
+
+Each pack has an editable default outcome of 90% empty, 9% one item and 1%
+two items. Items feed inventory and home changes. Duplicates remain in
+inventory; the first permanent copy can furnish the home, and consumables
+are used immediately. There is no resale or return of credits.
+
+Around 500,000,000 openings is the proposed funding target, not permission to
+invent money or force purchases. At 8 credits each it costs 4,000,000,000
+credits. The 12-credit starting balances supply 60,000,000 of that; actual
+earnings and each resident's leftover credits determine the feasible number
+of openings. Keep your earnings generation assumptions transparent rather
+than silently changing them to hit this target.
+
+Please return the sample and manifest first, then the reproducible generation
+code and full earnings export. We will join source rows by resident_id and day,
+preserve your source simulation ID and file hash as provenance, and assign
+world_id/simulation_id to the resulting spending scenario. Do not add starting
+balances to credits_earned: our importer supplies the 12-credit grant once.

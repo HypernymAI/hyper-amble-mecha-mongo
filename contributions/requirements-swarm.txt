@@ -1,0 +1,4 @@
+# Use the same tested web/database dependencies as this Presents package.
+-r requirements-presents.txt
+# Cached sentence-transformers is detected when already installed. Model
+# downloads are never triggered by the sandbox; Voyage uses httpx directly.

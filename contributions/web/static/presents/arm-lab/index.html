@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>SO-101 Conveyor Lab · Amble Presents</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./app.css">
+  <script type="importmap">
+    {"imports": {
+      "three": "/static/elsewhere/vendor/three.module.js",
+      "three/addons/": "./vendor/three-addons/",
+      "three/examples/jsm/": "./vendor/three-addons/"
+    }}
+  </script>
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <section id="stage" aria-label="SO-101 conveyor cell, recorded simulation">
+      <div id="loading">Loading the SO-101 model…</div>
+      <div id="badge">SIMULATED · recorded MuJoCo run</div>
+      <div id="belt-state"></div>
+      <div id="flashes" aria-live="polite"></div>
+    </section>
+    <aside id="panel">
+      <header>
+        <div>
+          <h1>Conveyor Lab</h1>
+          <p class="sub">SO-101 picks red squares for money</p>
+        </div>
+        <button id="back" type="button">Back</button>
+      </header>
+      <div id="money-box">
+        <div id="money">$0.00</div>
+        <div id="counts"></div>
+      </div>
+      <figure id="cam">
+        <div class="cam-wrap"><canvas id="cam-3d" width="320" height="240"></canvas><canvas id="cam-overlay" width="320" height="240"></canvas></div>
+        <figcaption>Belt camera · OpenCV detections from the run</figcaption>
+      </figure>
+      <div id="controls">
+        <button id="play" type="button" aria-label="Pause">❚❚</button>
+        <input id="scrub" type="range" min="0" max="0" value="0" aria-label="Playback position">
+        <span id="time">0.0 s</span>
+      </div>
+      <div id="controls2">
+        <label>Speed <select id="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label>
+        <label>Run <select id="episode"></select></label>
+      </div>
+      <details id="ledger-box" open>
+        <summary>Recorded dollar ledger</summary>
+        <ol id="ledger"></ol>
+      </details>
+      <p class="fine">Physics: MuJoCo · Robot: official SO-101 model (TheRobotStudio, Apache-2.0) · IK: mink · Trajectories: Ruckig · Vision: OpenCV. This page replays recorded frames; it does not simulate. Recorded dollars are separate from town credits and do not change resident balances.</p>
+    </aside>
+  </div>
+</body>
+</html>

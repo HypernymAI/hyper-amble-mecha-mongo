@@ -1,0 +1,484 @@
+{
+  "schema": "hyper-amble-mecha-mongo-source-excerpt/1",
+  "source_repository": "HypernymAI/amble_mongo",
+  "source_revision": "ddccfc7f325cb03c21575330cad5b725b9401a72",
+  "original_amble_revision_excluded": "59359a5a97e80923c1ec94ad0bf8023f8f3578b8",
+  "selection": "Wholly new files covered by the source repository MIT contribution scope and absent from the original Amble source tree. Mixed files and original history are omitted.",
+  "demo": "https://mongodb.amble.channel/hypernym/presents/#now",
+  "files": [
+    {
+      "path": "contributions/LICENSES/MIT.txt",
+      "source_path": "LICENSES/MIT.txt",
+      "source_sha256": "89f56bdd73fd1ce8cd628d7f722f4a4089c10eb9610c477baa58934a04b8bc3b",
+      "sha256": "89f56bdd73fd1ce8cd628d7f722f4a4089c10eb9610c477baa58934a04b8bc3b",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/Start Swarm.command",
+      "source_path": "Start Swarm.command",
+      "source_sha256": "8a082dbd322569660889383202af0088656520ea243a3c038cb81b57ddf94d2f",
+      "sha256": "8a082dbd322569660889383202af0088656520ea243a3c038cb81b57ddf94d2f",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/core/agent_engine_memory.py",
+      "source_path": "core/agent_engine_memory.py",
+      "source_sha256": "b2ff7081922ba2cbb8640ed88d0a816153d96afd23a921c71ccb9fccb1f542e1",
+      "sha256": "b2ff7081922ba2cbb8640ed88d0a816153d96afd23a921c71ccb9fccb1f542e1",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/core/atlas_memory.py",
+      "source_path": "core/atlas_memory.py",
+      "source_sha256": "c8b374e6214ecd20719b7cee5851ba9cb95ef1edc159c0d2941bf938c56a4bed",
+      "sha256": "c8b374e6214ecd20719b7cee5851ba9cb95ef1edc159c0d2941bf938c56a4bed",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/core/reply_judge.py",
+      "source_path": "core/reply_judge.py",
+      "source_sha256": "43f481997cf7e8a959e2bb769c22897c115a24ea4d6a92caafc70ed8807825f0",
+      "sha256": "43f481997cf7e8a959e2bb769c22897c115a24ea4d6a92caafc70ed8807825f0",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/docs/AGENT_ENGINE.md",
+      "source_path": "docs/AGENT_ENGINE.md",
+      "source_sha256": "e74e8d5bc7cca24ea225b1ec205c8505fdc60302a324501e57b6bbca09d45e33",
+      "sha256": "e538f4a0b89f5ab6c32a39a84fc74a66489aaccf6533fc9f6b0474654469643b",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/docs/ARM_HANDOFF.md",
+      "source_path": "docs/ARM_HANDOFF.md",
+      "source_sha256": "bd095dccd5b55318e010e51e3643e6fee357e6a58cbf04d08abd64d8ee613ef9",
+      "sha256": "2c719e85cd53ee5a98cf0254974c7486f0b043fe80cffcde6645ecf229576075",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/docs/CHRIS_HANDOFF.md",
+      "source_path": "docs/CHRIS_HANDOFF.md",
+      "source_sha256": "f55e8e1bbeeea4cc9abc54894480e7e5c78edc478b856af4469d3b82475e791d",
+      "sha256": "05f2898a01b323798830388c9d45f1051f42159f4da2e1461fe914536862beb8",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/docs/DEMO_SWARM.md",
+      "source_path": "docs/DEMO_SWARM.md",
+      "source_sha256": "71dcc191f96da3917668f8608686b1b539cf5b1ca26c953229db43b6ac49af3d",
+      "sha256": "ad74e54c8f7388de4fdc1772edc653d07aabbfe9574d54e57ad78746a19dc0d5",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/requirements-agent-engine.txt",
+      "source_path": "requirements-agent-engine.txt",
+      "source_sha256": "01cf47c039d80f43060ac00baf464377e272f3b96399803a3172197367c12e9c",
+      "sha256": "01cf47c039d80f43060ac00baf464377e272f3b96399803a3172197367c12e9c",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/requirements-swarm.txt",
+      "source_path": "requirements-swarm.txt",
+      "source_sha256": "f2eacbba93bfcd58a81eb0b5c6f8123e20a2c92ef5773b54e156000f37e93a1f",
+      "sha256": "f2eacbba93bfcd58a81eb0b5c6f8123e20a2c92ef5773b54e156000f37e93a1f",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/README.md",
+      "source_path": "sandbox/README.md",
+      "source_sha256": "bae37647f7e5a17b5a8d0a0148321876ef532e3cff453dc2b292baacf42f28cf",
+      "sha256": "7af45459de52d38d097c281721f66bff16856e76f2cf955068af73b583319c7e",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/sandbox/__init__.py",
+      "source_path": "sandbox/__init__.py",
+      "source_sha256": "51a09d23939655db74c9165b4a7379b40ad5a525aba00db189fb1ee39f77c8e7",
+      "sha256": "51a09d23939655db74c9165b4a7379b40ad5a525aba00db189fb1ee39f77c8e7",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/atlas_adapter.py",
+      "source_path": "sandbox/atlas_adapter.py",
+      "source_sha256": "debfc74417e29bd2e021e226bd4469d4fc370c50552f3bf0851ef6e28609fb3b",
+      "sha256": "debfc74417e29bd2e021e226bd4469d4fc370c50552f3bf0851ef6e28609fb3b",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/economy.py",
+      "source_path": "sandbox/economy.py",
+      "source_sha256": "0fc2e80b7e273fdea9ef63e9c8af4c69ce274f84817bf148fd7387cfa51d5e43",
+      "sha256": "0fc2e80b7e273fdea9ef63e9c8af4c69ce274f84817bf148fd7387cfa51d5e43",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/memory.py",
+      "source_path": "sandbox/memory.py",
+      "source_sha256": "94e01f434c008c6be0f995e95353ccf4ce64fec3d38e7929f7916c3d2ce54cba",
+      "sha256": "94e01f434c008c6be0f995e95353ccf4ce64fec3d38e7929f7916c3d2ce54cba",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/provider.py",
+      "source_path": "sandbox/provider.py",
+      "source_sha256": "3a78b25c8bd39393bf00ca624ca280fe699eab55aa22c9c47cda0477598837b3",
+      "sha256": "3a78b25c8bd39393bf00ca624ca280fe699eab55aa22c9c47cda0477598837b3",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/state.py",
+      "source_path": "sandbox/state.py",
+      "source_sha256": "96643be73b1cdaaac3cdfe3462e2fa03d5ae265d658a6c318873f982b81a94ed",
+      "sha256": "96643be73b1cdaaac3cdfe3462e2fa03d5ae265d658a6c318873f982b81a94ed",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/sandbox/worksites.py",
+      "source_path": "sandbox/worksites.py",
+      "source_sha256": "1adedf40287adedb6c58126e3698541378e542cec09b11b0221bc18e0523da8a",
+      "sha256": "1adedf40287adedb6c58126e3698541378e542cec09b11b0221bc18e0523da8a",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/scripts/package_swarm_worker.py",
+      "source_path": "scripts/package_swarm_worker.py",
+      "source_sha256": "3cdd1d66994634ea2907753c75107751d70c5b41208bbfe13955fc40602aa8b3",
+      "sha256": "3cdd1d66994634ea2907753c75107751d70c5b41208bbfe13955fc40602aa8b3",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/scripts/swarm_run.py",
+      "source_path": "scripts/swarm_run.py",
+      "source_sha256": "893fd41175f72513ad6f1f5204cd508799030092a2abe5d1a73d24768b86958e",
+      "sha256": "893fd41175f72513ad6f1f5204cd508799030092a2abe5d1a73d24768b86958e",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/scripts/swarm_server.py",
+      "source_path": "scripts/swarm_server.py",
+      "source_sha256": "75610f655ac9e317c75e3c53ef5eb50a74ec1c14707ef9a269b0bebdd4a0c050",
+      "sha256": "75610f655ac9e317c75e3c53ef5eb50a74ec1c14707ef9a269b0bebdd4a0c050",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/scripts/swarm_worker.py",
+      "source_path": "scripts/swarm_worker.py",
+      "source_sha256": "04697748cd02a26ac20fa51e31afd3e108e4959ddaafd42df844cb59d20b26c7",
+      "sha256": "04697748cd02a26ac20fa51e31afd3e108e4959ddaafd42df844cb59d20b26c7",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/scripts/sync_resident_life.py",
+      "source_path": "scripts/sync_resident_life.py",
+      "source_sha256": "f5e4512830503d350f0e6d8ef03f08aebdd448b9a51a3c8029caebee6de276dd",
+      "sha256": "f5e4512830503d350f0e6d8ef03f08aebdd448b9a51a3c8029caebee6de276dd",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/EARNINGS_HANDOFF.txt",
+      "source_path": "simulations/economy/EARNINGS_HANDOFF.txt",
+      "source_sha256": "fcd9cc4b8ef1db5a68b9db4e7682256cd17076b016abf8c4689b28ea2a0f3ba7",
+      "sha256": "9dd51637a571a9c4ddb521e7fadfc9350874655994736da302cfe0079d4b3228",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/economy/INTEGRATION_NOTES.txt",
+      "source_path": "simulations/economy/INTEGRATION_NOTES.txt",
+      "source_sha256": "333dadbe84d89b2207b8f64d9bc030d38df5712abbbada3a8106423d2685080b",
+      "sha256": "d278d8290dda68784502e92b11400ce37f5d63b1721a4316914d0faf1fcc2460",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/economy/PACKAGE_README.txt",
+      "source_path": "simulations/economy/PACKAGE_README.txt",
+      "source_sha256": "21f1a410e88b38568576d282b5c2e16b0953fb4c70be6ba0a4257b16aa03f7aa",
+      "sha256": "aecf5337cff98b8fa075de36322e05e5fe0a5551066032c01f9425b28553e77d",
+      "adaptations": [
+        "Replaced a machine-specific development path with a portable reference.",
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/economy/README.txt",
+      "source_path": "simulations/economy/README.txt",
+      "source_sha256": "e58235e67158580d4ba1126c85f963a5392d591ddff01a60c6a98c73ba27fbca",
+      "sha256": "acad868512866a81f26a698d947950eef40df48d968d0e7180c43c77b56c063c",
+      "adaptations": [
+        "Replaced a machine-specific development path with a portable reference.",
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/economy/catalog.json",
+      "source_path": "simulations/economy/catalog.json",
+      "source_sha256": "dd04246470bb3644be82a96c6088e9e78a7551983717741ed125fb69c992e8ca",
+      "sha256": "dd04246470bb3644be82a96c6088e9e78a7551983717741ed125fb69c992e8ca",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/check_pipeline.py",
+      "source_path": "simulations/economy/check_pipeline.py",
+      "source_sha256": "326ef05ab531c68d6c022ba8060029f967b690de07d5aed2e7e5bcfff6fad39d",
+      "sha256": "326ef05ab531c68d6c022ba8060029f967b690de07d5aed2e7e5bcfff6fad39d",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/generate.py",
+      "source_path": "simulations/economy/generate.py",
+      "source_sha256": "cdf14a700230f0f40b40d156a54960c5ccdd34bf2abb1627082149168f0fc41d",
+      "sha256": "cdf14a700230f0f40b40d156a54960c5ccdd34bf2abb1627082149168f0fc41d",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/parameters.json",
+      "source_path": "simulations/economy/parameters.json",
+      "source_sha256": "dc25edccd2bd1cb4df0bfe05289c8105cb02edf6cea4c0120aac3e87b9bcefe9",
+      "sha256": "839244b9e127ea2913ff0139186860c0a54a0d1ad3e574a2d5966931678dedb5",
+      "adaptations": [
+        "Replaced a machine-specific development path with a portable reference."
+      ]
+    },
+    {
+      "path": "contributions/simulations/economy/requirements-simulation.txt",
+      "source_path": "simulations/economy/requirements-simulation.txt",
+      "source_sha256": "24de7d9f336eed81257b27f2a620d3944e27e2d3f858f27a7303dc2f6f2d0f06",
+      "sha256": "24de7d9f336eed81257b27f2a620d3944e27e2d3f858f27a7303dc2f6f2d0f06",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/requirements.txt",
+      "source_path": "simulations/economy/requirements.txt",
+      "source_sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "sha256": "7bd6b8946940b79948c548c8048e545684b91c8edc9444d8dfc0c8f76a97c0a7",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/economy/validate.py",
+      "source_path": "simulations/economy/validate.py",
+      "source_sha256": "53c1d69f2e43b8f7baa9206b3c63ae463b1874c3052274b20d213f1d9f2824d5",
+      "sha256": "53c1d69f2e43b8f7baa9206b3c63ae463b1874c3052274b20d213f1d9f2824d5",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/README.md",
+      "source_path": "simulations/resident_life/README.md",
+      "source_sha256": "ad302fe1f638a85c2fdba8dd4a6015dd042d343e55c4af33f9053e613a456def",
+      "sha256": "696f819c665254d10245b24acf93da4e7175bfd71caa68383dff7f37ec740078",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/resident_life/SCALE_README.md",
+      "source_path": "simulations/resident_life/SCALE_README.md",
+      "source_sha256": "618b59ec047d1244885098f575812e42001523db27fb991fd0bfa978502ff52d",
+      "sha256": "1544c4d5db8b6ab0911eafbe3501e44504966f407cd80f411b18dc837e8aff55",
+      "adaptations": [
+        "Added an archival scope note; original package instructions remain for context."
+      ]
+    },
+    {
+      "path": "contributions/simulations/resident_life/generate.py",
+      "source_path": "simulations/resident_life/generate.py",
+      "source_sha256": "5866b84b63265bae9310dfdc6570dfc061d3ca48c3272c5cee3e04e56f73e236",
+      "sha256": "5866b84b63265bae9310dfdc6570dfc061d3ca48c3272c5cee3e04e56f73e236",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/reader.py",
+      "source_path": "simulations/resident_life/reader.py",
+      "source_sha256": "026fabc8f7743f2423e404e2bd70bba94889d2d50922418de0e4d4a577883867",
+      "sha256": "026fabc8f7743f2423e404e2bd70bba94889d2d50922418de0e4d4a577883867",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/scale.py",
+      "source_path": "simulations/resident_life/scale.py",
+      "source_sha256": "fe1f570ce65a96709cbf8cc97b5c1b1911600727913647b8e28a6ef871a2b567",
+      "sha256": "fe1f570ce65a96709cbf8cc97b5c1b1911600727913647b8e28a6ef871a2b567",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/test_resident_life.py",
+      "source_path": "simulations/resident_life/test_resident_life.py",
+      "source_sha256": "ea1c8df918f2a0e6b16157d9d891b82143d8da939f66f71bb637ce41376ef7f2",
+      "sha256": "ea1c8df918f2a0e6b16157d9d891b82143d8da939f66f71bb637ce41376ef7f2",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/test_scale.py",
+      "source_path": "simulations/resident_life/test_scale.py",
+      "source_sha256": "e43d7f1602f36239b7089a774440d0e4a04bc3b5579c22753cd911da362f7383",
+      "sha256": "e43d7f1602f36239b7089a774440d0e4a04bc3b5579c22753cd911da362f7383",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/simulations/resident_life/validate_scale_archive.py",
+      "source_path": "simulations/resident_life/validate_scale_archive.py",
+      "source_sha256": "5695a8e40671c425b6d280b65866799daaba6132112566b9e78ec2451b4e886c",
+      "sha256": "5695a8e40671c425b6d280b65866799daaba6132112566b9e78ec2451b4e886c",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_agent_engine_memory.py",
+      "source_path": "tests/test_agent_engine_memory.py",
+      "source_sha256": "7d128be8e5392331c03f5a9f06f4e7b6b308e196dbecd2a7aa9177fac7e44106",
+      "sha256": "7d128be8e5392331c03f5a9f06f4e7b6b308e196dbecd2a7aa9177fac7e44106",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_atlas_adapter.py",
+      "source_path": "tests/test_swarm_atlas_adapter.py",
+      "source_sha256": "b4b6956d9b54f866489fc670ae6a9d2c8d13cc4ed5edcb2c1ff5826120175ef4",
+      "sha256": "b4b6956d9b54f866489fc670ae6a9d2c8d13cc4ed5edcb2c1ff5826120175ef4",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_economy.py",
+      "source_path": "tests/test_swarm_economy.py",
+      "source_sha256": "252a3882ef5cae99b76f51ab3469f52e7e1baa21334abdf464060fd0f2a64113",
+      "sha256": "252a3882ef5cae99b76f51ab3469f52e7e1baa21334abdf464060fd0f2a64113",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_memory.py",
+      "source_path": "tests/test_swarm_memory.py",
+      "source_sha256": "00bbc77b49bc94f9846fe9258d25d44356b1f393ede8f54d0254da48b681a541",
+      "sha256": "00bbc77b49bc94f9846fe9258d25d44356b1f393ede8f54d0254da48b681a541",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_server.py",
+      "source_path": "tests/test_swarm_server.py",
+      "source_sha256": "5776cc6b56adecb8e24fe2a6cdd5d750ad4b90c2b520769acd56c5036d7e6088",
+      "sha256": "5776cc6b56adecb8e24fe2a6cdd5d750ad4b90c2b520769acd56c5036d7e6088",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_simulation_sync.py",
+      "source_path": "tests/test_swarm_simulation_sync.py",
+      "source_sha256": "0045326d64e7a0126f5eed0cfb6dedde6c5ef9171ba1e5677f2415bc6345efce",
+      "sha256": "0045326d64e7a0126f5eed0cfb6dedde6c5ef9171ba1e5677f2415bc6345efce",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_swarm_state.py",
+      "source_path": "tests/test_swarm_state.py",
+      "source_sha256": "bf2161744dd381113b534c2fb368aa4a56b304db6b62aeb101f1c062fd28bdb1",
+      "sha256": "bf2161744dd381113b534c2fb368aa4a56b304db6b62aeb101f1c062fd28bdb1",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/tests/test_sync_resident_life.py",
+      "source_path": "tests/test_sync_resident_life.py",
+      "source_sha256": "272d2a0c301246d853616dd8ce30cfef45ca531ac156f0c3198ab4ae0935fe9c",
+      "sha256": "272d2a0c301246d853616dd8ce30cfef45ca531ac156f0c3198ab4ae0935fe9c",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/presents_mind.py",
+      "source_path": "web/presents_mind.py",
+      "source_sha256": "59c2e2014050997db3d7c977c930fb9bdceab2189d37597ebfd80f68bb62ff32",
+      "sha256": "59c2e2014050997db3d7c977c930fb9bdceab2189d37597ebfd80f68bb62ff32",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/NOTICE.md",
+      "source_path": "web/static/presents/arm-lab/NOTICE.md",
+      "source_sha256": "1c6fb6fd07a55d47a664eb380c5b9fe1dd89af1f132d65c7da8f1e1df610c180",
+      "sha256": "1c6fb6fd07a55d47a664eb380c5b9fe1dd89af1f132d65c7da8f1e1df610c180",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/app.css",
+      "source_path": "web/static/presents/arm-lab/app.css",
+      "source_sha256": "2252c57e3dde1053a9ba4890958563b8c562ae2eb46797c55040c4a646cc31c2",
+      "sha256": "2252c57e3dde1053a9ba4890958563b8c562ae2eb46797c55040c4a646cc31c2",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/app.js",
+      "source_path": "web/static/presents/arm-lab/app.js",
+      "source_sha256": "0c40973707fd7ccf75a9344dc443c2f7839d468278256b9215f1c9a6dd203799",
+      "sha256": "0c40973707fd7ccf75a9344dc443c2f7839d468278256b9215f1c9a6dd203799",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/index.html",
+      "source_path": "web/static/presents/arm-lab/index.html",
+      "source_sha256": "7506ae7ef42640480df860b29f10643c079aca5f289df0293057da526cb64597",
+      "sha256": "7506ae7ef42640480df860b29f10643c079aca5f289df0293057da526cb64597",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/starter.css",
+      "source_path": "web/static/presents/arm-lab/starter.css",
+      "source_sha256": "43d9c6e874b9b376813cee281ecb56e79c21e3e2d5d6f8e1d703d81a5c18a78b",
+      "sha256": "43d9c6e874b9b376813cee281ecb56e79c21e3e2d5d6f8e1d703d81a5c18a78b",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/arm-lab/starter.js",
+      "source_path": "web/static/presents/arm-lab/starter.js",
+      "source_sha256": "f1ea502a75c0a6511790c075b9efdcf2cdf0d69353ad13937a6f617d21ea5f43",
+      "sha256": "f1ea502a75c0a6511790c075b9efdcf2cdf0d69353ad13937a6f617d21ea5f43",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/mind.css",
+      "source_path": "web/static/presents/mind.css",
+      "source_sha256": "39556c37e2b29ff34c65246724accbdece643734c51248ac23a4f8daf22789bf",
+      "sha256": "39556c37e2b29ff34c65246724accbdece643734c51248ac23a4f8daf22789bf",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/mind.js",
+      "source_path": "web/static/presents/mind.js",
+      "source_sha256": "8a9b2aec2905c26ef457a8b501abf397cc14773726473c13cab4604b850c42a4",
+      "sha256": "8a9b2aec2905c26ef457a8b501abf397cc14773726473c13cab4604b850c42a4",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/swarm-sites.js",
+      "source_path": "web/static/presents/swarm-sites.js",
+      "source_sha256": "9132cc11598c253966361e3a0c57e6593c7a18c5b8b3689fc0a80872d95d5ce3",
+      "sha256": "9132cc11598c253966361e3a0c57e6593c7a18c5b8b3689fc0a80872d95d5ce3",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/swarm-world.js",
+      "source_path": "web/static/presents/swarm-world.js",
+      "source_sha256": "79607a151adc8aa2fd1db8c3127586aba081e7cf8c1ac71bc3cac632d38cebe7",
+      "sha256": "79607a151adc8aa2fd1db8c3127586aba081e7cf8c1ac71bc3cac632d38cebe7",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/swarm.css",
+      "source_path": "web/static/presents/swarm.css",
+      "source_sha256": "bb5d1017a181e56a88e67d4ac22d8be4ccc54a1e528e73d79daafa0e912a27eb",
+      "sha256": "bb5d1017a181e56a88e67d4ac22d8be4ccc54a1e528e73d79daafa0e912a27eb",
+      "adaptations": []
+    },
+    {
+      "path": "contributions/web/static/presents/swarm.js",
+      "source_path": "web/static/presents/swarm.js",
+      "source_sha256": "536063c2169c76a2157d486964de8958c5d5c68c4184053655e37f330327e483",
+      "sha256": "536063c2169c76a2157d486964de8958c5d5c68c4184053655e37f330327e483",
+      "adaptations": []
+    }
+  ]
+}
